@@ -260,3 +260,26 @@ footer .social-media a {
     font-size: 20px; /* Reduce font size for better fit */
   }
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  font-family: inherit;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+
+th {
+  background-color: #1165ed;
+  color: #e7e7e7;
+  font-size: 20px;
+}
+
+
+
+
