@@ -221,6 +221,100 @@ background: linear-gradient(to right, #8b4ef7, #5a8efc);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.subjects h2{
+  text-align: center;
+  font-family: "Comic Neue", serif;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+th, td {
+  font-family: inherit;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+
+th {
+  background-color: #1165ed;
+  color: #e7e7e7;
+  font-size: 20px;
+}
+
+/* Responsive Table */
+.subjects {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+#subjectsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#subjectsTable th, #subjectsTable td {
+  padding: 12px;
+  font-family: inherit;
+  text-align: left;
+  border: 1px solid #000000;
+}
+
+#subjectsTable th {
+  background-color: #11a6e1;
+  font-weight: bold;
+}
+
+#subjectsTable td a {
+  text-decoration: none;
+  color: #2575fc;
+}
+
+#subjectsTable td a:hover {
+  color: #6a11cb;
+}
+
+/* Responsive Table for smaller screens */
+@media screen and (max-width: 768px) {
+  #subjectsTable {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+
+  #subjectsTable th, #subjectsTable td {
+      display: block;
+      text-align: right;
+  }
+
+  #subjectsTable td {
+      border: none;
+      padding: 10px;
+      text-align: left;
+  }
+
+  #subjectsTable td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 120px;
+  }
+
+  #subjectsTable th {
+      display: none;
+  }
+}
+
+
+
+
+/* //this the footer section/ */
+
 
 footer {
   background-color: #3c3f56;
@@ -260,26 +354,4 @@ footer .social-media a {
     font-size: 20px; /* Reduce font size for better fit */
   }
 }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  font-family: inherit;
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #000000;
-}
-
-th {
-  background-color: #1165ed;
-  color: #e7e7e7;
-  font-size: 20px;
-}
-
-
-
 
