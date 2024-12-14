@@ -67,6 +67,11 @@ header nav ul li a:hover {
   text-align: center;
   padding: 60px 20px;
 }
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #e7e7e7;
+}
 
 .hero .search-bar {
   padding: 10px;
@@ -151,7 +156,10 @@ header nav ul li a:hover {
   flex-wrap: nowrap;
   gap: 10px;
 }
-
+.category-card a{
+  color: inherit;
+  text-decoration: none;
+}
 .category-card {
 background: linear-gradient(to right, #8b4ef7, #5a8efc);
   color: white;
@@ -164,6 +172,12 @@ background: linear-gradient(to right, #8b4ef7, #5a8efc);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
 }
+.category-card:hover {
+  transform: scale(1.05); /* Increase size */
+  color: #f7e704;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 1024px) {
     .category-cards {
         flex-wrap: wrap; 
