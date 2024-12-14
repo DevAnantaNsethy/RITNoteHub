@@ -1,0 +1,248 @@
+/* styles.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", serif;
+}
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  background-color: #3c3f56;
+  color: white;
+  padding: 10px 20px;
+  height: 10vh;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+header .logo img {
+  display: block;
+  height: 80px;
+  width: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0 10px; /* Adjust padding */
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between; /* Adjust spacing */
+  width: 100%; /* Ensure the navbar doesn't overflow */
+}
+
+header nav ul li {
+  margin-left: 40px;
+}
+
+header nav ul li a {
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #2575fc; /* Change color on hover */
+}
+
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero .search-bar {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px; /* Limit width on larger screens */
+  margin: 20px auto; /* Center horizontally */
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  transition: width 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hero .search-bar {
+    width: 80%; /* Make the search bar take up 80% of the screen width on small screens */
+    max-width: none; /* Remove max-width limit on small screens */
+  }
+}
+.featured-courses {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.course-card {
+  background: linear-gradient(to right, #8b4ef7, #5a8efc);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  font-family: "Comic Neue", serif;
+  font-weight: 500;
+  font-size: 20px;
+  border: 2px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.course-card:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 16px 16px rgba(232, 232, 232, 0.2);
+}
+
+.course-card:hover {
+  color: #f1f1f1;
+}
+@media (max-width: 768px) {
+  .featured-courses {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-card {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .course-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+.categories {
+  padding: 50px 20px;
+}
+.categories h2{
+  text-align: center;
+  font-family: "Comic Neue", serif;
+  font-weight: 500;
+  font-size: 40px;
+
+}
+.category-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.category-card {
+background: linear-gradient(to right, #8b4ef7, #5a8efc);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 180px;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+@media (max-width: 1024px) {
+    .category-cards {
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 10px; 
+    }
+}
+@media (max-width: 768px) {
+    .category-cards {
+        flex-direction: column; /* Stack the category cards vertically */
+        align-items: center; /* Center the category cards */
+    }
+
+    .category-card {
+        width: 90%; /* Make cards take up 90% of the container's width */
+        max-width: 300px; /* Limit the width to 300px */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        width: 100%; 
+        max-width: 100%; 
+    }
+}
+
+.notes {
+  padding: 50px 20px;
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.note-card {
+  background-color: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #3c3f56;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social-media a {
+  margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+  header {
+    height: auto; /* Allow height to adjust dynamically */
+    padding: 20px; /* Add extra padding for better spacing */
+    flex-wrap: wrap; /* Allow the header's content to wrap */
+  }
+
+  header nav ul {
+    display: block; /* Stack items vertically */
+    text-align: center; /* Center the items */
+    width: 100%; /* Make ul take full width */
+  }
+
+  header nav ul li {
+    margin: 10px 0; /* Add vertical spacing between items */
+  }
+
+  header nav ul li a {
+    font-size: 20px; /* Reduce font size for better fit */
+  }
+}
