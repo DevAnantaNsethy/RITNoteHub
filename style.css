@@ -69,98 +69,111 @@ header nav ul li a:hover {
 }
 .hero h1 {
   font-size: 36px;
-  margin-bottom: 20px;
-  color: #e7e7e7;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.hero .search-bar {
-  padding: 10px;
-  width: 100%;
-  max-width: 600px; /* Limit width on larger screens */
-  margin: 20px auto; /* Center horizontally */
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  transition: width 0.3s ease;
-}
+/*  */
 @media (max-width: 768px) {
-  .hero .search-bar {
+  .hero .search-bar-container {
     width: 80%; /* Make the search bar take up 80% of the screen width on small screens */
     max-width: none; /* Remove max-width limit on small screens */
   }
 }
-.featured-courses {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  flex-wrap: nowrap;
-  gap: 20px;
+
+.search-bar-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: inherit;
+  max-width: 500px; /* Adjust as needed */
 }
 
-.course-card {
-  background: linear-gradient(to right, #8b4ef7, #5a8efc);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  text-align: center;
-  font-family: "Comic Neue", serif;
-  font-weight: 500;
-  font-size: 20px;
-  border: 2px solid black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+.search-bar {
+  width: 100%;
+  padding: 15px 45px 15px 15px; /* Add padding for the icon */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.hero p{
+  padding-top: 10px;
+  color: #d7cdcd;
+  font-family: inherit;
+  font-size: 16px;
+}
+/* Moving Text Effect */
+.moving-text {
+  overflow: hidden;
+  white-space: nowrap;
   box-sizing: border-box;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  
 }
 
-.course-card:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 16px 16px rgba(232, 232, 232, 0.2);
+.moving-text p {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* Start text outside the view */
+  animation: scrollText 15s linear infinite;
 }
 
-.course-card:hover {
-  color: #f1f1f1;
-}
-@media (max-width: 768px) {
-  .featured-courses {
-    flex-direction: column;
-    align-items: center;
+@keyframes scrollText {
+  from {
+      transform: translateX(100%); /* Start from right */
   }
-  .course-card {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-@media (max-width: 480px) {
-  .course-card {
-    width: 100%;
-    max-width: 90%;
+  to {
+      transform: translateX(-100%); /* Move to the left */
   }
 }
 
 .categories {
-  padding: 50px 20px;
+  padding: 10px 20px;
 }
 .categories h2{
   text-align: center;
   font-family: "Comic Neue", serif;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 48px;
+  text-decoration: underline;
+ margin-bottom: 20px;
+}
+.categories h3{
+  text-align: center;
+  font-family: "Comic Neue", serif;
+  font-weight: 500;
+  font-size: 28px;
+  
 
 }
 .category-cards {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 20px auto;
   flex-wrap: nowrap;
-  gap: 10px;
+  gap: 10pX;
+  max-width: 1200px;
+
 }
 .category-card a{
   color: inherit;
   text-decoration: none;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 450;
+  font-family: inherit;
 }
 .category-card {
+  flex: 1 1 calc(20% - 10px);
+  padding: 10px 15px;
 background: linear-gradient(to right, #8b4ef7, #5a8efc);
   color: white;
   padding: 20px;
@@ -173,7 +186,7 @@ background: linear-gradient(to right, #8b4ef7, #5a8efc);
   box-sizing: border-box;
 }
 .category-card:hover {
-  transform: scale(1.05); /* Increase size */
+  transform: scale(1.05); 
   color: #f7e704;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -182,7 +195,7 @@ background: linear-gradient(to right, #8b4ef7, #5a8efc);
     .category-cards {
         flex-wrap: wrap; 
         justify-content: space-between; 
-        gap: 10px; 
+        gap: 20px; 
     }
 }
 @media (max-width: 768px) {
@@ -251,6 +264,7 @@ th {
   max-width: 100%;
   overflow-x: auto;
   margin: 20px 0;
+  margin-bottom: 180px;
 }
 
 #subjectsTable {
@@ -276,7 +290,7 @@ th {
 }
 
 #subjectsTable td a:hover {
-  color: #6a11cb;
+  color: #701bcc;
 }
 
 /* Responsive Table for smaller screens */
@@ -310,7 +324,40 @@ th {
   }
 }
 
+/* Flex container for the category cards */
+#cse-semesters .category-cards {
+  display: flex;
+  justify-content: space-around; /* Match the "Branches" section spacing */
+  gap: 15px; /* Slightly reduced gap */
+  flex-wrap: wrap;
+}
 
+/* Flex item for each card */
+#cse-semesters .category-card {
+  background-color: #4b0076; /* Your existing color */
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 18%;  /* Set fixed width for each card */
+  min-width: 150px; /* Prevent shrinking too much on small screens */
+  max-width: 180px; /* Prevent expanding too much on larger screens */
+  transition: background-color 0.3s;
+}
+
+/* Style for links inside the category cards */
+#cse-semesters .category-card a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block; /* Ensure the link fills the entire card */
+  text-align: center;
+}
+
+/* Hover effect */
+#cse-semesters .category-card:hover {
+  background-color: #6a1b9a; /* Adjust hover effect as needed */
+}
 
 
 /* //this the footer section/ */
