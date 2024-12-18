@@ -268,12 +268,13 @@ th {
 }
 
 #subjectsTable {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   border-collapse: collapse;
 }
 
 #subjectsTable th, #subjectsTable td {
-  padding: 12px;
+  padding: 10px 15px;
   font-family: inherit;
   text-align: left;
   border: 1px solid #000000;
