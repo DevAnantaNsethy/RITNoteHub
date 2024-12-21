@@ -80,26 +80,71 @@ header nav ul li a:hover {
     max-width: none; /* Remove max-width limit on small screens */
   }
 }
-
+/* Container styling */
 .search-bar-container {
   position: relative;
-  display: inline-block;
   width: 100%;
-  font-family: inherit;
-  max-width: 500px; /* Adjust as needed */
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
 }
 
+/* Search bar styling */
 .search-bar {
   width: 100%;
-  padding: 15px 45px 15px 15px; /* Add padding for the icon */
+  padding: 12px 16px;
   font-size: 16px;
   border: 1px solid #ccc;
-  font-family: inherit;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.hero p{
+.search-bar:focus {
+  border-color: #4285f4;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+}
+
+/* Search results dropdown */
+.search-results {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+/* Individual result items */
+.result-item {
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.result-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  color: #888;
+}
+
+.hero p {
   padding-top: 10px;
   color: #d7cdcd;
   font-family: inherit;
@@ -116,7 +161,6 @@ header nav ul li a:hover {
   margin-top: 20px;
   font-size: 16px;
   font-weight: bold;
-  
 }
 
 .moving-text p {
@@ -128,42 +172,39 @@ header nav ul li a:hover {
 
 @keyframes scrollText {
   from {
-      transform: translateX(100%); /* Start from right */
+    transform: translateX(100%); /* Start from right */
   }
   to {
-      transform: translateX(-100%); /* Move to the left */
+    transform: translateX(-100%); /* Move to the left */
   }
 }
 
 .categories {
   padding: 10px 20px;
 }
-.categories h2{
+.categories h2 {
   text-align: center;
   font-family: "Comic Neue", serif;
   font-weight: 500;
   font-size: 48px;
   text-decoration: underline;
- margin-bottom: 20px;
+  margin-bottom: 20px;
 }
-.categories h3{
+.categories h3 {
   text-align: center;
   font-family: "Comic Neue", serif;
   font-weight: 500;
   font-size: 28px;
-  
-
 }
 .category-cards {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
   flex-wrap: nowrap;
-  gap: 10pX;
+  gap: 10px;
   max-width: 1200px;
-
 }
-.category-card a{
+.category-card a {
   color: inherit;
   text-decoration: none;
   text-align: center;
@@ -174,7 +215,7 @@ header nav ul li a:hover {
 .category-card {
   flex: 1 1 calc(20% - 10px);
   padding: 10px 15px;
-background: linear-gradient(to right, #8b4ef7, #5a8efc);
+  background: linear-gradient(to right, #8b4ef7, #5a8efc);
   color: white;
   padding: 20px;
   text-align: center;
@@ -186,35 +227,35 @@ background: linear-gradient(to right, #8b4ef7, #5a8efc);
   box-sizing: border-box;
 }
 .category-card:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
   color: #f7e704;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {
-    .category-cards {
-        flex-wrap: wrap; 
-        justify-content: space-between; 
-        gap: 20px; 
-    }
+  .category-cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
 }
 @media (max-width: 768px) {
-    .category-cards {
-        flex-direction: column; /* Stack the category cards vertically */
-        align-items: center; /* Center the category cards */
-    }
+  .category-cards {
+    flex-direction: column; /* Stack the category cards vertically */
+    align-items: center; /* Center the category cards */
+  }
 
-    .category-card {
-        width: 90%; /* Make cards take up 90% of the container's width */
-        max-width: 300px; /* Limit the width to 300px */
-    }
+  .category-card {
+    width: 90%; /* Make cards take up 90% of the container's width */
+    max-width: 300px; /* Limit the width to 300px */
+  }
 }
 
 @media (max-width: 480px) {
-    .category-card {
-        width: 100%; 
-        max-width: 100%; 
-    }
+  .category-card {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .notes {
@@ -239,14 +280,15 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
 }
-.subjects h2{
+.subjects h2 {
   text-align: center;
   font-family: "Comic Neue", serif;
   font-weight: 500;
   font-size: 40px;
 }
 
-th, td {
+th,
+td {
   font-family: inherit;
   padding: 10px;
   text-align: left;
@@ -273,7 +315,8 @@ th {
   border-collapse: collapse;
 }
 
-#subjectsTable th, #subjectsTable td {
+#subjectsTable th,
+#subjectsTable td {
   padding: 10px 15px;
   font-family: inherit;
   text-align: left;
@@ -297,31 +340,32 @@ th {
 /* Responsive Table for smaller screens */
 @media screen and (max-width: 768px) {
   #subjectsTable {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
-  #subjectsTable th, #subjectsTable td {
-      display: block;
-      text-align: right;
+  #subjectsTable th,
+  #subjectsTable td {
+    display: block;
+    text-align: right;
   }
 
   #subjectsTable td {
-      border: none;
-      padding: 10px;
-      text-align: left;
+    border: none;
+    padding: 10px;
+    text-align: left;
   }
 
   #subjectsTable td::before {
-      content: attr(data-label);
-      font-weight: bold;
-      display: inline-block;
-      width: 120px;
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
   }
 
   #subjectsTable th {
-      display: none;
+    display: none;
   }
 }
 
@@ -339,7 +383,7 @@ th {
   padding: 15px;
   border-radius: 5px;
   text-align: center;
-  width: 18%;  /* Set fixed width for each card */
+  width: 18%; /* Set fixed width for each card */
   min-width: 150px; /* Prevent shrinking too much on small screens */
   max-width: 180px; /* Prevent expanding too much on larger screens */
   transition: background-color 0.3s;
@@ -373,14 +417,14 @@ th {
   font-size: 2.5rem;
   color: #4b0076;
   margin-bottom: 15px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .question-paper-section p {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 30px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .btn-access-questions {
@@ -451,7 +495,8 @@ select {
   border-collapse: collapse;
 }
 
-#question-table th, #question-table td {
+#question-table th,
+#question-table td {
   padding: 8px;
   border: 1px solid #ddd;
   text-align: center;
@@ -496,13 +541,17 @@ select {
 
 /* Preparation Section Styling */
 .preparation-section {
-  background: linear-gradient(45deg, #0056b3, #007BFF); /* Slightly warmer blue gradient */
+  background: linear-gradient(
+    45deg,
+    #0056b3,
+    #007bff
+  ); /* Slightly warmer blue gradient */
   padding: 70px 20px 50px; /* Added more padding on top */
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   color: #fff;
   text-align: center;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -533,7 +582,12 @@ select {
 }
 
 .instruction-item {
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for cards */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slightly transparent background for cards */
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -548,7 +602,7 @@ select {
 
 .instruction-item h3 {
   font-size: 22px;
-  color: #FFD700; /* Gold accent for titles */
+  color: #ffd700; /* Gold accent for titles */
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -581,11 +635,11 @@ select {
 
 .preparation-quotes blockquote {
   font-size: 18px;
-  color: #00C9FF; /* Light blue for quotes */
-  border-left: 4px solid #00C9FF;
+  color: #00c9ff; /* Light blue for quotes */
+  border-left: 4px solid #00c9ff;
   padding-left: 30px;
   margin-bottom: 20px;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -599,13 +653,13 @@ select {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(188, 34, 34, 0.1);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 #previous-year-questions h2 {
   font-size: 30px;
   font-family: inherit;
-  color:  #6a1b9a;
+  color: #6a1b9a;
   font-weight: 800;
   margin-bottom: 20px;
   text-align: center;
@@ -661,7 +715,8 @@ select {
   background-color: #ffffff;
 }
 
-#question-table th, #question-table td {
+#question-table th,
+#question-table td {
   padding: 12px;
   text-align: center;
   border: 1px solid #ddd;
@@ -669,7 +724,7 @@ select {
 }
 
 #question-table th {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -681,7 +736,7 @@ select {
 }
 
 #question-table td a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -708,7 +763,8 @@ select {
     width: 100%;
   }
 
-  #question-table td, #question-table th {
+  #question-table td,
+  #question-table th {
     padding: 10px;
     font-size: 14px;
   }
@@ -934,18 +990,18 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-wrapper {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .newsletter-form {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .newsletter-form input, 
+  .newsletter-form input,
   .newsletter-form button {
-      border-radius: 5px;
-      margin-bottom: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -970,4 +1026,3 @@ footer {
     font-size: 20px; /* Reduce font size for better fit */
   }
 }
-
