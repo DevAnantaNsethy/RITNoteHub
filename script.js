@@ -1,62 +1,126 @@
 const questionPaperData = {
-    "cse": {
-        "1st": [
-            { sno: 1, subject: "Mathematics-I", code: "MTH101", link: "#" },
-            { sno: 2, subject: "Programming", code: "CSE101", link: "#" }
-        ],
-        "2nd": [
-            { sno: 1, subject: "Data Structures", code: "CSE201", link: "#" }
-        ]
-    },
-    "ece": {
-        "1st": [
-            { sno: 1, subject: "Basic Electronics", code: "ECE101", link: "#" }
-        ]
-    }
+  "cse": {  
+  "2nd": {
+      "3rd & 4th": [
+          { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2024", "link": "#" },
+          { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2024", "link": "#" },
+          { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2024", "link": "#" },
+          { "sno": 4, "subject": "Engineering Economics", "code": "EEE301", "examYear": "2024", "link": "#" },
+          { "sno": 5, "subject": "Object-Oriented Programming Using Java", "code": "CSE302", "examYear": "2024", "link": "#" },
+          { "sno": 6, "subject": "Analog Electronic Circuit", "code": "ECE301", "examYear": "2024", "link": "#" },
+          { "sno": 7, "subject": "Computer Organisation & Architecture", "code": "CSE303", "examYear": "2024", "link": "#" },
+          { "sno": 8, "subject": "Discrete Mathematics", "code": "MTH302", "examYear": "2024", "link": "#" },
+          { "sno": 9, "subject": "Data Communication", "code": "CSE304", "examYear": "2024", "link": "#" },
+          { "sno": 10, "subject": "Organisational Behaviour", "code": "MGT301", "examYear": "2024", "link": "#" }
+      ]
+  },
+  "3rd": {
+      "5th & 6th": [
+          { "sno": 1, "subject": "Advanced Computer Architecture", "code": "CSE401", "examYear": "2024", "link": "#" },
+          { "sno": 2, "subject": "Database Management", "code": "CSE402", "examYear": "2024", "link": "#" },
+          { "sno": 3, "subject": "Formal Language & Automata Theory", "code": "CSE403", "examYear": "2024", "link": "#" },
+          { "sno": 4, "subject": "Object-Oriented Analysis & Design", "code": "CSE404", "examYear": "2024", "link": "#" },
+          { "sno": 5, "subject": "Software Engineering", "code": "CSE405", "examYear": "2024", "link": "#" },
+          { "sno": 6, "subject": "Optimization in Engineering", "code": "CSE406", "examYear": "2024", "link": "#" },
+          { "sno": 7, "subject": "Cloud Computing", "code": "CSE407", "examYear": "2024", "link": "#" },
+          { "sno": 8, "subject": "Analog and Digital Communication", "code": "ECE402", "examYear": "2024", "link": "#" },
+          { "sno": 9, "subject": "Compiler Design", "code": "CSE408", "examYear": "2024", "link": "#" }
+      ]
+  },
+  "4th": {
+      "7th & 8th": [
+          { "sno": 1, "subject": "Mathematics-I", "code": "MTH101", "examYear": "2021", "link": "#" },
+          { "sno": 2, "subject": "Programming", "code": "CSE101", "examYear": "2021", "link": "#" },
+          { "sno": 3, "subject": "Data Structures", "code": "CSE201", "examYear": "2022", "link": "#" }
+      ]
+  }
+}
+,
+  "first": {
+      "1st": {
+        "1st & 2nd": [
+    { "sno": 1, "subject": "Mathematics-I", "code": "MTH101", "examYear": "2023", "link": "#" },
+    { "sno": 2, "subject": "Programming", "code": "CSE101", "examYear": "2023", "link": "#" },
+    { "sno": 3, "subject": "Mathematics-I", "code": "MTH101", "examYear": "2023", "link": "#" },
+    { "sno": 4, "subject": "Physics", "code": "PHY101", "examYear": "2023", "link": "#" },
+    { "sno": 5, "subject": "Basic Electrical", "code": "ELE101", "examYear": "2023", "link": "#" },
+    { "sno": 6, "subject": "Basic Mechanical", "code": "MECH101", "examYear": "2023", "link": "#" },
+    { "sno": 7, "subject": "English", "code": "ENG101", "examYear": "2023", "link": "#" },
+    { "sno": 1, "subject": "Data Structures", "code": "CSE201", "examYear": "2022", "link": "#" },
+    { "sno": 2, "subject": "Basic Electronics", "code": "ELE102", "examYear": "2023", "link": "#" },
+    { "sno": 3, "subject": "Basic Civil", "code": "CIV101", "examYear": "2023", "link": "#" },
+    { "sno": 4, "subject": "Chemistry", "code": "CHEM101", "examYear": "2023", "link": "#" },
+    { "sno": 5, "subject": "Mathematics-II", "code": "MTH102", "examYear": "2023", "link": "#" },
+    { "sno": 6, "subject": "Programming Using C", "code": "CSE102", "examYear": "2023", "link": "#" }
+  ]
+}
+},
 };
 
 // Update year dropdown based on branch
 function updateYearOptions() {
-    const branch = document.getElementById("branch-select").value;
-    const yearSelect = document.getElementById("year-select");
-    yearSelect.innerHTML = '<option value="">--Choose Year--</option>';
+  const branch = document.getElementById("branch-select").value;
+  const yearSelect = document.getElementById("year-select");
+  yearSelect.innerHTML = '<option value="">--Choose Year--</option>';
 
-    if (branch && questionPaperData[branch]) {
-        Object.keys(questionPaperData[branch]).forEach(year => {
-            const option = document.createElement("option");
-            option.value = year;
-            option.textContent = year + " Year";
-            yearSelect.appendChild(option);
-        });
-    }
-    document.getElementById("question-table-container").style.display = "none";
+  if (branch && questionPaperData[branch]) {
+      Object.keys(questionPaperData[branch]).forEach(year => {
+          const option = document.createElement("option");
+          option.value = year;
+          option.textContent = year + " Year";
+          yearSelect.appendChild(option);
+      });
+  }
+  document.getElementById("semester-select").innerHTML = '<option value="">--Choose Semester--</option>';
+  document.getElementById("question-table-container").style.display = "none";
+}
+
+// Update semester dropdown based on the selected year
+function updateSemesterOptions() {
+  const branch = document.getElementById("branch-select").value;
+  const year = document.getElementById("year-select").value;
+  const semesterSelect = document.getElementById("semester-select");
+  semesterSelect.innerHTML = '<option value="">--Choose Semester--</option>';
+
+  if (branch && year && questionPaperData[branch][year]) {
+      Object.keys(questionPaperData[branch][year]).forEach(semester => {
+          const option = document.createElement("option");
+          option.value = semester;
+          option.textContent = "Semester " + semester;
+          semesterSelect.appendChild(option);
+      });
+  }
+  document.getElementById("question-table-container").style.display = "none";
 }
 
 // Show the table of question papers
 function showQuestionTable() {
-    const branch = document.getElementById("branch-select").value;
-    const year = document.getElementById("year-select").value;
-    const tableBody = document.getElementById("table-body");
+  const branch = document.getElementById("branch-select").value;
+  const year = document.getElementById("year-select").value;
+  const semester = document.getElementById("semester-select").value;
+  const tableBody = document.getElementById("table-body");
 
-    tableBody.innerHTML = "";
+  tableBody.innerHTML = "";
 
-    if (branch && year && questionPaperData[branch][year]) {
-        questionPaperData[branch][year].forEach((item, index) => {
-            const row = `
-                <tr>
-                    <td>${index + 1}</td>
-                    <td>${item.subject}</td>
-                    <td>${item.code}</td>
-                    <td><a href="${item.link}" target="_blank">Download</a></td>
-                </tr>
-            `;
-            tableBody.innerHTML += row;
-        });
-        document.getElementById("question-table-container").style.display = "block";
-    } else {
-        document.getElementById("question-table-container").style.display = "none";
-    }
+  if (branch && year && semester && questionPaperData[branch][year] && questionPaperData[branch][year][semester]) {
+      questionPaperData[branch][year][semester].forEach((item, index) => {
+          const row = `
+              <tr>
+                  <td>${item.sno}</td>
+                  <td>${item.subject}</td>
+                  <td>${item.code}</td>
+                  <td>${item.examYear}</td>
+                  <td><a href="${item.link}" target="_blank">Download</a></td>
+              </tr>
+          `;
+          tableBody.innerHTML += row;
+      });
+      document.getElementById("question-table-container").style.display = "block";
+  } else {
+      document.getElementById("question-table-container").style.display = "none";
+  }
 }
+
 // Branch names
 const branches = ["Computer Science", "Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Electronics", "Information Technology"];
 

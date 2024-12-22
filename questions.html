@@ -69,55 +69,52 @@
     </div>
   </div>
   <!-- Previous Year Question Paper Section -->
+<!-- Previous Year Question Papers Section -->
 <section id="previous-year-questions">
-    <h2>Previous Year Question Papers</h2>
-  
-    <!-- Dropdown Menus -->
-    <div class="dropdown-container">
-      <!-- Select Branch -->
+  <h2>Previous Year Question Papers</h2>
+
+  <!-- Dropdown Menus -->
+  <div class="dropdown-container">
       <label for="branch-select">Select Branch:</label>
       <select id="branch-select" onchange="updateYearOptions()">
-        <option value="">--Choose Branch--</option>
-        <option value="cse">Computer Science</option>
-        <option value="ece">Electronics</option>
-        <option value="mech">Mechanical</option>
+          <option value="">--Choose Branch--</option>
+          <option value="first">First Year</option>
+          <option value="cse">Computer Science Engineering</option>
+          <option value="ece">Electronics & Communication</option>
+          <option value="ee">Electrical Engineering</option>
+          <option value="cse">Civil Engineering</option>
+          <option value="mech">Mechanical Engineering</option>
+          <option value="civil">Civil Engineering</option>
       </select>
-  
-      <!-- Select Year Studying In -->
-      <label for="studying-year-select">Select Year Studying In:</label>
-      <select id="studying-year-select" onchange="showQuestionTable()">
-        <option value="">--Choose Studying Year--</option>
-        <option value="1">1st Year</option>
-        <option value="2">2nd Year</option>
-        <option value="3">3rd Year</option>
-        <option value="4">4th Year</option>
+
+      <label for="year-select">Select Year of Study:</label>
+      <select id="year-select" onchange="updateSemesterOptions()">
+          <option value="">--Choose Year--</option>
       </select>
-  
-      <!-- Select Exam Year -->
-      <label for="year-select">Select Exam Year:</label>
-      <select id="year-select" onchange="showQuestionTable()">
-        <option value="">--Choose Exam Year--</option>
+
+      <label for="semester-select">Select Semester:</label>
+      <select id="semester-select" onchange="showQuestionTable()">
+          <option value="">--Choose Semester--</option>
       </select>
-    </div>
-  
-    <!-- Table for Question Papers -->
-    <div id="question-table-container">
+  </div>
+
+  <!-- Table for Question Papers -->
+  <div id="question-table-container">
       <table id="question-table">
-        <thead>
-          <tr>
-            <th>S.No</th>
-            <th>Subject Name</th>
-            <th>Subject Code</th>
-            <th>Download Link</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
+          <thead>
+              <tr>
+                  <th>S.No</th>
+                  <th>Subject Name</th>
+                  <th>Subject Code</th>
+                  <th>Exaam year</th>
+                  <th>Download Link</th>
+              </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
       </table>
-    </div>
-  </section>
-  
-</div>
-  
+  </div>
+</section>
+
         <!-- Floating arrow button -->
         <button class="floating-arrow" onclick="location.href='#'">
             &#8593;
