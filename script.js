@@ -120,7 +120,7 @@ function showQuestionTable() {
       document.getElementById("question-table-container").style.display = "none";
   }
 }
-
+//Search bar logic//
 // Branch names
 const branches = ["Computer Science", "Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Electronics", "Information Technology"];
 
@@ -129,18 +129,23 @@ const years = ["Year 1", "Year 2", "Year 3"];
 
 // Subject names (organized by branch, year, and semester)
 const subjects = {
-  "Computer Science": {
+  "First year":{
     "Year 1": {
-      "Semester 1": ["Mathematics", "Physics", "Programming", "Data Structures", "English"],
-      "Semester 2": ["Algorithms", "Database Systems", "Operating Systems", "Networks", "Discrete Math"]
+      "Semester 1": ["Mathematics-I", "Physics", "Programming in C &data structures", "Basic Electrical", "English","Basic Mechanical"],
+      "Semester 2": ["Mathematics-II", "Chemistry", "Basic Civil", "Basic Electronics", "Universal Human Value", "Engineering Mechanics"]
     },
+  },
+  "Computer Science": {
     "Year 2": {
-      "Semester 3": ["Machine Learning", "Software Engineering", "Compiler Design", "Web Development", "Mobile Computing"],
-      "Semester 4": ["Artificial Intelligence", "Cloud Computing", "Cybersecurity", "Big Data", "Blockchain"]
+      "Semester 3": ["Discrete Mathematics", "Data structures", "OOp using Java", "Digital Logic & Design", "Enginnering Economics"],
+      "Semester 4": ["Mathematics-III","Design Analysis & Design", "Data Communication", "Organisatioinal Behaviour", "Analog Electronics"]
     },
     "Year 3": {
-      "Semester 5": ["Advanced Algorithms", "Distributed Systems", "IoT", "Robotics", "Human-Computer Interaction"],
-      "Semester 6": ["Final Year Project", "Research Methods", "Internship", "Electives", "Capstone Presentation"]
+      "Semester 5": ["Formal Language & Automata Theory", "Database Management System","Object-oriented Analysis & Design", "Advance Computer Archiecture", "Operating System"],
+      "Semester 6": ["Software Engineering", "compiler Design", "Optimization in Engineering", "Cloud Computing", "Analog and Digital Communication"]
+    },
+    "Year 4": {
+      "Semester 7": ["Entrapreneurship Development", "Internet of things", " Software project Management", " Industrial Safety Engineering", "Digital Image Processing", "Disaster Management"],
     }
   },
   "Mechanical Engineering": {
