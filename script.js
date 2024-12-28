@@ -2,16 +2,46 @@ const questionPaperData = {
   "cse": {  
   "2nd": {
       "3rd & 4th": [
-          { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2024", "link": "#" },
-          { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2024", "link": "#" },
-          { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2024", "link": "#" },
-          { "sno": 4, "subject": "Engineering Economics", "code": "EEE301", "examYear": "2024", "link": "#" },
-          { "sno": 5, "subject": "Object-Oriented Programming Using Java", "code": "CSE302", "examYear": "2024", "link": "#" },
-          { "sno": 6, "subject": "Analog Electronic Circuit", "code": "ECE301", "examYear": "2024", "link": "#" },
-          { "sno": 7, "subject": "Computer Organisation & Architecture", "code": "CSE303", "examYear": "2024", "link": "#" },
-          { "sno": 8, "subject": "Discrete Mathematics", "code": "MTH302", "examYear": "2024", "link": "#" },
-          { "sno": 9, "subject": "Data Communication", "code": "CSE304", "examYear": "2024", "link": "#" },
-          { "sno": 10, "subject": "Organisational Behaviour", "code": "MGT301", "examYear": "2024", "link": "#" }
+        //2024//
+          { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2024", "link": "https://drive.google.com/file/d/1RGAnZ1WvAg71WwrsKCzntJOVAMbrl8Rx/view?usp=sharing" },
+          { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2024", "link": "https://drive.google.com/file/d/1zst3okQm0Ioo5J5MomiIcGzQ5dwnlpR4/view?usp=sharing" },
+          { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2024", "link": "https://drive.google.com/file/d/1Vm6T18ILwoYOdWcQaKfEQ9svP5dI3kr5/view?usp=sharing" },
+          { "sno": 4, "subject": "Engineering Economics", "code": "EEE301", "examYear": "2024", "link": "https://drive.google.com/file/d/1l0V8LriNg0sktd940xtjYThG3_CTCbnc/view?usp=sharing" },
+          { "sno": 5, "subject": "Object-Oriented Programming Using Java", "code": "CSE302", "examYear": "2024", "link": "https://drive.google.com/file/d/1-w_HIbnpIYKigzLmp6Cv45XPyWJnMIam/view?usp=sharing" },
+          { "sno": 6, "subject": "Analog Electronic Circuit", "code": "ECE301", "examYear": "2024", "link": "https://drive.google.com/file/d/150yfl9Hp4uT45hWyNneCIOpA-xLkNj-k/view?usp=sharing" },
+          { "sno": 7, "subject": "Computer Organisation & Architecture", "code": "CSE303", "examYear": "2024", "link": "https://drive.google.com/file/d/1-n7t5I9jtrGIEzW-T5jzh-U0ABRe3j5U/view?usp=sharing" },
+          { "sno": 8, "subject": "Discrete Mathematics", "code": "MTH302", "examYear": "2024", "link": "https://drive.google.com/file/d/1bfwzZiNQ9d4G6iajvZwRKPp4fPc63NR9/view?usp=sharing" },
+          { "sno": 9, "subject": "Data Communication", "code": "CSE304", "examYear": "2024", "link": "https://drive.google.com/file/d/12OKEZcurJNO7vWN0GIepkMGYUmwm-UAr/view?usp=sharing" },
+          { "sno": 10, "subject": "Organisational Behaviour", "code": "MGT301", "examYear": "2024", "link": "https://drive.google.com/file/d/1kS0Voqd4i2VeSazym71b7pYJ66Illudq/view?usp=sharing" },
+          //2023//
+            { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2023", "link": "https://drive.google.com/file/d/1-L8ov2N6TaoOT6R-2rwIWEMIJUDTtJOs/view?usp=sharing" },
+            { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2023", "link": "https://drive.google.com/file/d/1fYJ-pkIgWm--tUcqlaHFVv6PTwngva0r/view?usp=sharing" },
+            { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2023", "link": "https://drive.google.com/file/d/1a0eMmanZlLRtIoVywV7I4JwWknP1VBGH/view?usp=sharing" },
+            
+        
+          
+            { "sno": 4, "subject": "Computer Organisation & Architecture", "code": "CSE303", "examYear": "2023", "link": "https://drive.google.com/file/d/1zvI9xSafxEvFpxKFkMuyEPvkE5KskTIJ/view?usp=sharing" },
+            { "sno": 5, "subject": "Discrete Mathematics", "code": "MTH302", "examYear": "2023", "link": "https://drive.google.com/file/d/11RGq6HL5Kof6zIn1VqH3nqw46gfhjuzT/view?usp=sharing" },
+            { "sno": 6, "subject": "Data Communication", "code": "CSE304", "examYear": "2023", "link": "https://drive.google.com/file/d/1AbFm_qxSZgAxMADSXiMAPXppFQXuX7UP/view?usp=sharing" },
+            { "sno": 7, "subject": "Organisational Behaviour", "code": "MGT301", "examYear": "2023", "link": "https://drive.google.com/file/d/1T1NiJ9vQgRr_4Z7RgtEooUTw1h7UvAQ0/view?usp=sharing" },
+            { "sno": 8, "subject": "Analog Electronic Circuit", "code": "ECE301", "examYear": "2022", "link": "https://drive.google.com/file/d/1fFQzeBkZFuUAL1Y3jtDkez2c6P-_0-_Z/view?usp=sharing" },
+        
+          //2022//
+            { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2022", "link": "https://drive.google.com/file/d/1OQuIbZ7G3qQysz2WR0C_tZpNWcE7JtZ5/view?usp=sharing" },
+            { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2022", "link": "https://drive.google.com/file/d/1bwoUxG86cbtTnmjwjsoiqSNs6m0lU5f7/view?usp=sharing" },
+            { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2022", "link": "https://drive.google.com/file/d/1x2esQS94JXffJVWoEMfQ5nDajej696nA/view?usp=sharing" },
+            { "sno": 4, "subject": "Engineering Economics", "code": "EEE301", "examYear": "2022", "link": "https://drive.google.com/file/d/1nPsYhkgdWwu9LGJd5FVzeEjY_EMMFdKk/view?usp=sharing" },
+            { "sno": 5, "subject": "Object-Oriented Programming Using Java", "code": "CSE302", "examYear": "2022", "link": "https://drive.google.com/file/d/1YZLBjPcTLZO817v4Qf-8P8rgLEA5oFUE/view?usp=sharing" },
+            { "sno": 6, "subject": "Analog Electronic Circuit", "code": "ECE301", "examYear": "2022", "link": "https://drive.google.com/file/d/10KFRGbISmyH2KpBy_ZhXktOKIl-Pi1IR/view?usp=sharing" },
+            { "sno": 7, "subject": "Organisational Behaviour", "code": "MGT301", "examYear": "2022", "link": "https://drive.google.com/file/d/1QUrxrS3K_PErhXPLPl_iEGtp_ul2FM2N/view?usp=sharing" },
+        
+          //2020//
+          
+          
+            { "sno": 1, "subject": "Data Structures", "code": "CSE201", "examYear": "2020", "link": "https://drive.google.com/file/d/1DQoKIka0dBi1LOWpBS__y_HlF2yMQQrI/view?usp=sharing" },
+            { "sno": 2, "subject": "Object-Oriented Programming Using Java", "code": "CSE302", "examYear": "2020", "link": "https://drive.google.com/file/d/1zl_yWDMS6QeMm7KR-6nWrOviAGiGkpAh/view?usp=sharing" },
+        
+        
       ]
   },
   "3rd": {
@@ -120,6 +150,7 @@ function showQuestionTable() {
       document.getElementById("question-table-container").style.display = "none";
   }
 }
+
 //Search bar logic//
 // Branch names
 const branches = ["Computer Science", "Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Electronics", "Information Technology"];
