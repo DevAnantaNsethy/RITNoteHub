@@ -17,9 +17,6 @@ const questionPaperData = {
             { "sno": 1, "subject": "Digital Logic & Design", "code": "CSE301", "examYear": "2023", "link": "https://drive.google.com/file/d/1-L8ov2N6TaoOT6R-2rwIWEMIJUDTtJOs/view?usp=sharing" },
             { "sno": 2, "subject": "Data Structures", "code": "CSE201", "examYear": "2023", "link": "https://drive.google.com/file/d/1fYJ-pkIgWm--tUcqlaHFVv6PTwngva0r/view?usp=sharing" },
             { "sno": 3, "subject": "Mathematics-III", "code": "MTH301", "examYear": "2023", "link": "https://drive.google.com/file/d/1a0eMmanZlLRtIoVywV7I4JwWknP1VBGH/view?usp=sharing" },
-            
-        
-          
             { "sno": 4, "subject": "Computer Organisation & Architecture", "code": "CSE303", "examYear": "2023", "link": "https://drive.google.com/file/d/1zvI9xSafxEvFpxKFkMuyEPvkE5KskTIJ/view?usp=sharing" },
             { "sno": 5, "subject": "Discrete Mathematics", "code": "MTH302", "examYear": "2023", "link": "https://drive.google.com/file/d/11RGq6HL5Kof6zIn1VqH3nqw46gfhjuzT/view?usp=sharing" },
             { "sno": 6, "subject": "Data Communication", "code": "CSE304", "examYear": "2023", "link": "https://drive.google.com/file/d/1AbFm_qxSZgAxMADSXiMAPXppFQXuX7UP/view?usp=sharing" },
@@ -151,7 +148,7 @@ function showQuestionTable() {
   }
 }
 
-//Search bar logic//
+//------------------------------Search bar logic--------------------------//
 // Branch names
 const branches = ["Computer Science", "Mechanical Engineering", "Civil Engineering", "Electrical Engineering", "Electronics", "Information Technology"];
 
